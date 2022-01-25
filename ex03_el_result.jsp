@@ -40,8 +40,10 @@
 		<!--
 			서버영역에 저장된 값을 접근할 때 정확히 해당 영역을 명시해서 접근
 			형식 : 서버영역Scope.속성이름
+			* 서버영역Scope을 붙여주지 않으면 page -> request -> session -> application 순으로
+			  검색해서 접근하게 된다. 
 		 -->
-			<td>${ pageScope.id }</td>
+			<td>${ pageScope.id }</td><!-- 페이지 형식이 아니라서 값 없음 -->
 			<td>${ requestScope.pw }</td>
 			<td>${ sessionScope.name }</td>
 			<td>${ applicationScope.email }</td>
